@@ -1,0 +1,3 @@
+{
+  "index.js": "function orbitalPeriod(arr) {\n  var GM = 398600.4418;\n  var earthRadius = 6367.4447;\n\n  arr.forEach(function (element) {\n    element['orbitalPeriod'] = Math.round(2 * Math.PI * Math.sqrt(((element['avgAlt'] + earthRadius) ** 3) / GM));\n    delete element['avgAlt'];\n  });\n  console.log(arr)\n  return arr;\n}\n\norbitalPeriod([{name : \"sputnik\", avgAlt : 35873.5553}]);\n"
+}
