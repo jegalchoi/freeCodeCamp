@@ -1,0 +1,3 @@
+{
+  "index.js": "function sumFibs(num) {\n  if (num == 1) {\n    return 1;\n  }\n\n  let arr = [1, 1];\n\n  while (arr[arr.length - 1] <= num) {\n    let sequence = arr[arr.length - 1] + arr[arr.length - 2];\n      arr.push(sequence);\n  };\n  console.log(arr)\n  return arr.filter(element => element % 2 != 0).reduce((a,b) => a + b) - arr[arr.length - 1];\n}\n\nfunction fibs(num) {\n  if (num == 1) {\n    return [1];\n  }\n  if (num == 2) {\n    return [1, 1];\n  }\n  let arr = fibs(num - 1);\n\n  return arr.concat(arr[arr.length - 1] + arr[arr.length - 2]); \n}\n\nsumFibs(4);\n"
+}
