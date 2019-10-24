@@ -1,0 +1,3 @@
+{
+  "index.js": "function steamrollArray(arr) {\n  let new_arr = []\n  arr.forEach(function (element) {\n    if (Array.isArray(element)) {\n      if (element.length == 1) {\n        new_arr.push(flatten_it(element));\n      } else {\n        new_arr = new_arr.concat(steamrollArray(element));\n      }\n    } else {\n      new_arr.push(element);\n    };\n  });\n\n  return new_arr;\n};\n\nfunction flatten_it (arr) {\n  let new_arr;\n  if (Array.isArray(arr[0])) {\n    new_arr = flatten_it(arr[0]);\n  } else {\n    return arr[0];\n  };\n\n  return new_arr;\n};\n\nsteamrollArray([1, [2], [3, [[4]]]]);\n"
+}
