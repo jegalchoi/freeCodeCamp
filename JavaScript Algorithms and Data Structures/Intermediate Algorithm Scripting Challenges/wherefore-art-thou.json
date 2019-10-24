@@ -1,0 +1,3 @@
+{
+  "index.js": "function whatIsInAName(collection, source) {\n  // What's in a name?\n  var arr = [];\n  // Only change code below this line\n  let sourceKeys = Object.keys(source);\n  let sourceValues = Object.values(source)\n  \n  collection.forEach (function (element) {\n    if (sourceKeys.every(piece => element[piece] == source[piece])) {\n      arr.push(element);\n    }\n  })\n\n  // Only change code above this line\n  return arr;\n}\n\nwhatIsInAName([{ first: \"Romeo\", last: \"Montague\" }, { first: \"Mercutio\", last: null }, { first: \"Tybalt\", last: \"Capulet\" }], { last: \"Capulet\" });\n"
+}
