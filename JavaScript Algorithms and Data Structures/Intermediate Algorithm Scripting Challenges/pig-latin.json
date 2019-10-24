@@ -1,0 +1,3 @@
+{
+  "index.js": "function translatePigLatin(str) {\n  let vowelsStart = /^[aeiou]/\n\n  if (vowelsStart.test(str)) {\n    return str + \"way\";\n  };\n\n  let vowels = /[aeiou]/gi\n\n  if (!vowels.test(str)) {\n    return str + 'ay';\n  };\n\n  let consonants = /[^aeiou]+/\n  let replacement = str.match(consonants)[0];\n  return str.replace(replacement, \"\") + replacement + \"ay\"\n}\n\ntranslatePigLatin(\"consonant\");\n"
+}
