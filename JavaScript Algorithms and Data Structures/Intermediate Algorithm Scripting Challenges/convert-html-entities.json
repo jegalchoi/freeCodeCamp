@@ -1,0 +1,3 @@
+{
+  "index.js": "function convertHTML(str) {\n\n  let first = /&/gi;\n  let second = /</gi;\n  let third = />/gi;\n  let fourth = /\"/gi;\n  let fifth = /'/gi;\n\n  str = str.replace(first, '&amp;')\n  str = str.replace(second, '&lt;')\n  str = str.replace(third, '&gt;')\n  str = str.replace(fourth, '&quot;')\n  str = str.replace(fifth, \"&apos;\")\n\n\n  return str;\n}\n\nconvertHTML(\"Dolce & Gabbana\");\n"
+}
