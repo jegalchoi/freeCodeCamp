@@ -1,0 +1,3 @@
+{
+  "index.js": "function palindrome(str) {\n  // Good luck!\n  let new_str = str.replace(/[^a-zA-Z0-9]/ig, \" \");\n  console.log(new_str);\n  \n  let arr = new_str.match(/\\S+/gi);\n  console.log(arr);\n  \n  new_str = arr.join(\"\").toLowerCase();\n  let reversed = new_str.split('').reverse().join('');\n  console.log(new_str);\n  console.log(reversed);\n\n  return reversed == new_str;\n}\n\n\n\npalindrome(\"eye\");\npalindrome(\"_eye\");\npalindrome(\"A man, a plan, a canal. Panama\");"
+}
