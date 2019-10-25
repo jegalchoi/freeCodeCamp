@@ -1,0 +1,3 @@
+{
+  "index.js": "function pairwise(arr, arg) {\n  if (arr.length == 0) {\n    return 0;\n  };\n\n  let indices = [];\n  let pairs = [];\n\n  for (let i = 0; i < arr.length; i += 1) {\n    for (let j = 0; j < arr.length; j += 1) {\n      if (i != j) {\n        if (arr[i] + arr[j] == arg) {\n          if (!(indices.includes(i) || indices.includes(j))) {\n            indices.push(i);\n            indices.push(j);\n          };\n          if (!(pairs.includes(arr[i]) || pairs.includes(arr[j]))) {\n            pairs.push(arr[i]);\n            pairs.push(arr[j]);\n          };\n        };\n      };\n    };\n  };\n\n  console.log(indices);\n  console.log(pairs);\n  return indices.reduce((a, b) => a + b);\n};\n\npairwise([1,4,2,3,0,5], 7);\n"
+}
