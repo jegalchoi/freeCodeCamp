@@ -1,0 +1,3 @@
+{
+  "index.js": "function addTogether(args) {\n  let thing = arguments [0]\n  if (typeof arguments[0] != \"number\") {\n    return undefined;\n  }; \n  \n  if (typeof arguments[0] == \"number\" && typeof arguments[1] == \"number\") {\n    return arguments[0] + arguments[1];\n  }; \n  \n  function inside(num) {\n    if (typeof arguments[0] != \"number\") {\n      return undefined;\n    }; \n    return num + thing;\n  }\n\n  if (arguments.length == 1) {\n    return inside;\n  };\n};\n\naddTogether(2,3);\naddTogether(2)(3);"
+}
