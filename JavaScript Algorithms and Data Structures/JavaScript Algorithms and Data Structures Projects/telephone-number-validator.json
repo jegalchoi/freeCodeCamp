@@ -1,0 +1,3 @@
+{
+  "index.js": "function telephoneCheck(str) {\n  // Good luck!\n  let new_str = str.replace(/[0-9]/gi, \"x\");\n  console.log(new_str);\n\n  switch(new_str) {\n    case 'xxx-xxx-xxxx':\n    case '(xxx)xxx-xxxx':\n    case '(xxx) xxx-xxxx':\n    case 'xxx xxx xxxx':\n    case 'xxxxxxxxxx':\n      return true;\n    case 'x xxx xxx xxxx':\n    case 'x xxx-xxx-xxxx':\n    case 'x(xxx)xxx-xxxx':\n    case 'x (xxx) xxx-xxxx':\n      if (str[0] != 1) {\n        return false;\n      } else {\n        return true;\n      }\n    default:\n      return false;\n  }\n  \n};\n\ntelephoneCheck(\"555-555-5555\");\n"
+}
