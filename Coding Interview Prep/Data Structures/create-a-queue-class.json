@@ -1,0 +1,3 @@
+{
+  "index.js": "function Queue() {\n  var collection = [];\n  this.print = function() {\n    console.log(collection);\n  };\n  // Only change code below this line\n  this.enqueue = function (element) {\n    collection.push(element);\n  };\n\n  this.dequeue = function () {\n    return collection.shift();\n  };\n\n  this.front = function () {\n    return collection[0];\n  };\n\n  this.size = function () {\n    return collection.length;\n  };\n\n  this.isEmpty = function () {\n    return collection.length == 0;\n  };\n  // Only change code above this line\n}\n"
+}
