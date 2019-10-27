@@ -1,0 +1,3 @@
+{
+  "index.js": "var byteSize = 64;\nvar buffer = new ArrayBuffer(byteSize);\nvar i32View = new Int32Array(buffer);\nconsole.log(buffer.byteLength);\nconsole.log(i32View.byteLength);\nconsole.log(i32View);"
+}
